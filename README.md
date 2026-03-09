@@ -23,10 +23,45 @@ To Implement ELLIPTIC CURVE CRYPTOGRAPHY(ECC)
 5. Security: ECC’s security relies on the Elliptic Curve Discrete Logarithm Problem (ECDLP), making it highly secure with shorter key lengths compared to traditional methods like RSA.
 
 ## Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int d, Gx, Gy;
+    int Qx, Qy;
+
+    printf("Elliptic Curve Cryptography (ECC) Key Generation\n");
+
+    // Input private key
+    printf("Enter private key (d): ");
+    scanf("%d", &d);
+
+    // Input base point coordinates
+    printf("Enter base point Gx: ");
+    scanf("%d", &Gx);
+
+    printf("Enter base point Gy: ");
+    scanf("%d", &Gy);
+
+    /* Public key generation (simplified multiplication) */
+    Qx = d * Gx;
+    Qy = d * Gy;
+
+    // Output public key
+    printf("\nPublic Key Q(x,y) = (%d , %d)\n", Qx, Qy);
+
+    return 0;
+}
+
+```
 
 
 
 ## Output:
+
+
+![fb2c9de8-995e-472f-b04c-9a6297dbc594](https://github.com/user-attachments/assets/b47e2765-b2b5-415d-b392-d7b4454aae49)
 
 
 ## Result:
